@@ -73,7 +73,7 @@ public class FrmManteProd extends JFrame {
 				registrar();
 			}
 		});
-		btnNewButton.setBounds(324, 29, 89, 23);
+		btnNewButton.setBounds(320, 11, 89, 23);
 		contentPane.add(btnNewButton);
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -150,12 +150,24 @@ public class FrmManteProd extends JFrame {
 				buscarProducto();
 			}
 		});
-		btnBuscar.setBounds(324, 54, 89, 23);
+		btnBuscar.setBounds(320, 36, 89, 23);
 		contentPane.add(btnBuscar);
+		
+		JButton btnActualizar = new JButton("Actualizar");
+		btnActualizar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				actualizarProducto();
+			}
+		});
+		btnActualizar.setBounds(320, 65, 89, 23);
+		contentPane.add(btnActualizar);
 		
 		llenaCombo();
 	}
-
+	void actualizarProducto() {
+		
+	}
+	
 	void buscarProducto() {
 		EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("mysql");
 		EntityManager em = fabrica.createEntityManager();
